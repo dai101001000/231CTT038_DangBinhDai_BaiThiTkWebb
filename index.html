@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Learning Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER: Hiển thị logo, tên website và thông tin sinh viên. Phần này dùng Flexbox trong CSS. -->
+    <header class="header">
+        <div class="logo-box">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>LearnHub</h1>
+                <p>Nền tảng học tập trực tuyến</p>
+            </div>
+        </div>
+
+        <div class="student-box">
+            <img src="images/avatar.png" alt="Ảnh sinh viên">
+            <div>
+                <h3>Đặng Bình Đại</h3>
+                <p>MSSV: <span id="studentId">231CTT038</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR: Menu cố định bên trái. JavaScript sẽ đổi màu mục được bấm. -->
+    <aside class="sidebar">
+        <nav>
+            <a href="#" class="menu-item active">🏠 Dashboard</a>
+            <a href="#" class="menu-item">📚 Môn học</a>
+            <a href="#" class="menu-item">✅ Bài tập</a>
+            <a href="#" class="menu-item">📊 Kết quả học tập</a>
+            <a href="#" class="menu-item">👤 Tài khoản</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN: Nội dung chính của trang. -->
+    <main class="main">
+        <section class="welcome">
+            <div>
+                <h2>Xin chào, Đặng Bình Đại! 👋</h2>
+                <p>Hôm nay là ngày học tập tuyệt vời!</p>
+            </div>
+            <div class="date-box">
+                <p>Thứ Hai, 08/06/2026</p>
+                <p>10:00 AM</p>
+            </div>
+        </section>
+
+        <div class="content-layout">
+            <section>
+                <h2>Danh sách môn học</h2>
+
+                <!-- COURSE GRID: Khu vực 6 môn học. JavaScript sẽ đổi class để thành 2 hoặc 3 cột theo MSSV. -->
+                <div class="course-grid" id="courseGrid">
+                    <div class="course-card">
+                        <img src="images/course1.jpg" alt="HTML CSS">
+                        <h3>HTML/CSS</h3>
+                        <div class="progress-row">
+                            <div class="progress"><span style="width: 90%;"></span></div>
+                            <strong>90%</strong>
+                        </div>
+                        <button class="view-btn" data-name="HTML/CSS" data-progress="90%">Xem</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="images/course2.jpg" alt="JavaScript">
+                        <h3>JavaScript</h3>
+                        <div class="progress-row">
+                            <div class="progress"><span style="width: 80%;"></span></div>
+                            <strong>80%</strong>
+                        </div>
+                        <button class="view-btn" data-name="JavaScript" data-progress="80%">Xem</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="images/course3.jpg" alt="PHP">
+                        <h3>PHP</h3>
+                        <div class="progress-row">
+                            <div class="progress"><span style="width: 75%;"></span></div>
+                            <strong>75%</strong>
+                        </div>
+                        <button class="view-btn" data-name="PHP" data-progress="75%">Xem</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="images/course4.jpg" alt="MySQL">
+                        <h3>MySQL</h3>
+                        <div class="progress-row">
+                            <div class="progress"><span style="width: 85%;"></span></div>
+                            <strong>85%</strong>
+                        </div>
+                        <button class="view-btn" data-name="MySQL" data-progress="85%">Xem</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="images/course5.jpg" alt="Laravel">
+                        <h3>Laravel</h3>
+                        <div class="progress-row">
+                            <div class="progress"><span style="width: 60%;"></span></div>
+                            <strong>60%</strong>
+                        </div>
+                        <button class="view-btn" data-name="Laravel" data-progress="60%">Xem</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="images/course6.jpg" alt="AI Cơ bản">
+                        <h3>AI Cơ bản</h3>
+                        <div class="progress-row">
+                            <div class="progress"><span style="width: 70%;"></span></div>
+                            <strong>70%</strong>
+                        </div>
+                        <button class="view-btn" data-name="AI Cơ bản" data-progress="70%">Xem</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SELECTED COURSE: Nơi hiển thị môn học khi bấm nút Xem. -->
+            <aside class="right-panel">
+                <div class="selected-course">
+                    <h2>MÔN HỌC ĐANG CHỌN</h2>
+                    <div class="big-icon">🎓</div>
+                    <p><b>Tên môn học:</b> <span id="selectedName">Chưa chọn</span></p>
+                    <p><b>Tiến độ:</b> <span id="selectedProgress">--</span></p>
+                    <hr>
+                    <p class="hint">Hãy chọn một môn học để xem thông tin chi tiết.</p>
+                </div>
+
+                <div class="notice">
+                    <h2>🔔 Thông báo</h2>
+                    <ul>
+                        <li>Bài tập tuần 5 đã được cập nhật.</li>
+                        <li>Lịch thi giữa kỳ đã được công bố.</li>
+                        <li>Hạn nộp bài tập PHP: 08/06/2026.</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- STATISTICS: 4 ô thống kê học tập. Phần này dùng Flexbox trong CSS. -->
+        <section class="stats">
+            <div class="stat-item">📚 <span>Số môn học</span> <b>6</b></div>
+            <div class="stat-item">✅ <span>Số bài tập</span> <b>24</b></div>
+            <div class="stat-item">⭐ <span>Điểm trung bình</span> <b>8.2/10</b></div>
+            <div class="stat-item">🏅 <span>Tín chỉ tích lũy</span> <b>18</b></div>
+        </section>
+    </main>
+
+    <!-- FOOTER: Hiển thị MSSV, họ tên và ngày thi theo yêu cầu đề bài. -->
+    <footer class="footer">
+        <p>MSSV: 231CTT08</p>
+        <p>Họ tên: <b>Đặng Bình Đại</b></p>
+        <p>Ngày thi: 08/06/2026 - 10:00 AM</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
