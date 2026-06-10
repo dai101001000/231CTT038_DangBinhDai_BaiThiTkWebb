@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#4f46e5,#7c3aed);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .box{
+            width:400px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#1e293b;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ddd;
+            border-radius:8px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            background:#4f46e5;
+            color:white;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#3730a3;
+        }
+
+        p{
+            text-align:center;
+            margin-top:15px;
+        }
+
+        a{
+            color:#4f46e5;
+            text-decoration:none;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🔐 Đăng nhập</h2>
+
+    <form action="index.html" method="get">
+    <input type="text" placeholder="Tên đăng nhập" required>
+    <input type="password" placeholder="Mật khẩu" required>
+
+    <button type="submit">Đăng nhập</button>
+</form>
+
+    <p>
+        Chưa có tài khoản?
+        <a href="register.html">Đăng ký</a>
+    </p>
+</div>
+
+</body>
+</html>
