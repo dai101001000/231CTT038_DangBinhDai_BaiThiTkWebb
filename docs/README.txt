@@ -180,14 +180,5 @@ Trong quá trình thực hiện dự án, các công cụ AI được sử dụn
 
 ---
 
-## Liên kết dự án
-
-### Repository GitHub
-
-https://github.com/dai101001000/231CTT038_DangBinhDai_BaiThiTkWebb
-
-### Website GitHub Pages
-
-https://dai101001000.github.io/231CTT038_DangBinhDai_BaiThiTkWebb/
 
 

@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\New folder\\dai101001000\\index.html"
+            "file": "d:\\New folder\\dangbinhdai\\index.html"
         }
     ]
 }
